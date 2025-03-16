@@ -1,0 +1,82 @@
+.comment {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.comment-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.comment-author {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1F2937;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #374151;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: #6B7280;
+  cursor: pointer;
+}
+
+.like-button.liked {
+  color: #4F46E5;
+}
+
+.like-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.load-more-comments {
+  padding: 8px 0;
+  color: #6B7280;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.load-more-comments:hover {
+  color: #4B5563;
+} 

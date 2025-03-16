@@ -1,0 +1,365 @@
+.profile-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 1.5rem 1rem;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* display: grid; */
+  grid-template-columns: 250px 1fr 280px;
+  gap: 1.5rem;
+}
+
+.profile-header {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  height: fit-content;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* margin: 0 auto 1rem; */
+  object-fit: cover;
+  border: 3px solid #f3f4f6;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+}
+
+.profile-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
+}
+
+.location-icon {
+  font-size: 0.875rem;
+}
+
+.profile-member-since {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-icon {
+  font-size: 0.875rem;
+}
+
+.edit-profile-btn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 0.375rem 1rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.edit-icon {
+  font-size: 0.875rem;
+}
+
+.edit-profile-btn:hover {
+  background: #3367d6;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.2;
+}
+
+.profile-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.content-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.tab.active {
+  color: #4285f4;
+  border-bottom-color: #4285f4;
+}
+
+.tab:hover:not(.active) {
+  color: #4285f4;
+  background: rgba(66, 133, 244, 0.05);
+}
+
+.achievement-summary {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.summary-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.summary-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.summary-value {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.875rem;
+}
+
+.badges-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.badge-item {
+  text-align: center;
+}
+
+.badge-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.badge-name {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+@media (max-width: 1200px) {
+  .profile-container {
+    grid-template-columns: 220px 1fr 250px;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-header {
+    margin-bottom: 1.25rem;
+  }
+  
+  .achievement-summary {
+    margin-top: 1.25rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 2rem 0.5rem;
+  }
+
+  .profile-page-header {
+    padding: 0 1rem;
+  }
+
+  .profile-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-page-header p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 1.5rem 0;
+  }
+
+  .profile-page-header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-page-header::after {
+    width: 40px;
+  }
+}
+
+/* Loading state */
+.profile-loading,
+.posts-loading,
+.profile-error,
+.posts-error,
+.profile-not-found,
+.no-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #2175e8;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-error h2,
+.profile-not-found h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.profile-error p,
+.profile-not-found p,
+.posts-error p,
+.no-posts p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.profile-error button,
+.profile-not-found button,
+.create-post-btn {
+  background-color: #2175e8;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.profile-error button:hover,
+.profile-not-found button:hover,
+.create-post-btn:hover {
+  background-color: #1a5cb8;
+}
+
+/* Post title link */
+.post-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title-link:hover .post-title {
+  color: #2175e8;
+}
+
+/* Action button as link */
+a.action-btn {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+} 

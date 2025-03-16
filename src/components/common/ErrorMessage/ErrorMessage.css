@@ -1,0 +1,22 @@
+.error-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-content {
+  background-color: #fff3f3;
+  border: 1px solid var(--error-color);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-content h2 {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.error-content p {
+  color: var(--text-color);
+} 

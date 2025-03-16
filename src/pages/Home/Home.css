@@ -1,0 +1,728 @@
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.home-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Make the community stats sidebar responsive */
+@media (max-width: 1280px) {
+  .community-stats {
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* Custom styles for specific components */
+.issue-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.issue-card:hover {
+  border-color: #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.vote-button {
+  padding: 4px;
+  color: #9CA3AF;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.vote-button:hover {
+  background-color: #F3F4F6;
+  color: #4F46E5;
+}
+
+.vote-button.active {
+  color: #4F46E5;
+}
+
+.vote-button.active:hover {
+  background-color: #F3F4F6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .community-stats {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .issue-metadata {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .issue-actions {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  min-height: calc(100vh - 64px);
+}
+
+/* Left Sidebar Styles */
+.left-sidebar {
+  position: sticky;
+  top: 16px;
+  height: calc(100vh - 80px);
+  padding-right: 8px;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+}
+
+.sidebar-link.active {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.sidebar-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.categories-section {
+  margin-bottom: 24px;
+}
+
+.categories-section h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6B7280;
+  margin-bottom: 12px;
+  padding-left: 12px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-item {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.category-item:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.category-item.traffic {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.category-item.environment {
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+
+.category-item.public-safety {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.category-item.sanitation {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.report-issue-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.report-issue-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Main Content Styles */
+.content-header {
+  margin-bottom: 24px;
+}
+
+.tab-navigation {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.tab-button {
+  padding: 12px 0;
+  color: #6b7280;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.tab-button:hover {
+  color: #374151;
+}
+
+.tab-button.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.issue-card {
+  display: flex;
+  padding: 16px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  gap: 16px;
+}
+
+.issue-card:hover {
+  border-color: #d1d5db;
+}
+
+.vote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px; /* Fixed width */
+}
+
+.vote-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.vote-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin: 4px 0;
+}
+
+.issue-content {
+  flex: 1;
+  min-width: 0; /* Prevent content overflow */
+}
+
+.issue-metadata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.author-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.post-info {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.issue-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.issue-description {
+  font-size: 13px;
+  color: #4B5563;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.issue-image-container {
+  margin-bottom: 12px;
+}
+
+.issue-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.issue-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-tag {
+  display: inline-flex;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.category-tag.traffic {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.category-tag.environment {
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+.category-tag.public-safety {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.issue-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: #6B7280;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-radius: 4px;
+}
+
+.action-button:hover {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.action-button.liked {
+  color: #4F46E5;
+}
+
+.action-button.liked:hover {
+  background-color: #F3F4F6;
+}
+
+.action-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+  position: sticky;
+  top: 24px;
+  height: fit-content;
+}
+
+.stats-card, .contributors-card, .trending-card {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.stats-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.contributors-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.contributors-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.contributors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contributor-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contributor-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.contributor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contributor-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.contributor-points {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .app-layout {
+    grid-template-columns: 240px 1fr;
+  }
+  
+  .right-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-sidebar {
+    display: none;
+  }
+}
+
+/* Add these to your existing CSS */
+
+.trending-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.trending-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4b5563;
+  font-size: 13px;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+
+.trending-item:hover {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.trending-icon {
+  width: 14px;
+  height: 14px;
+  color: #3b82f6;
+}
+
+/* Animation for vote and like interactions */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.vote-button.active .vote-icon,
+.action-button.liked .action-icon {
+  animation: pop 0.3s ease;
+}
+
+/* Share button tooltip */
+.action-button[data-copied]::after {
+  content: 'Copied!';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #374151;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.action-button[data-copied="true"]::after {
+  opacity: 1;
+}
+
+/* Guest Banner */
+.guest-banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.guest-banner-content {
+  text-align: center;
+}
+
+.guest-banner h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.guest-banner p {
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
+}
+
+.guest-banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.banner-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.banner-btn.login {
+  color: #3b82f6;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.banner-btn.login:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.banner-btn.register {
+  color: white;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.banner-btn.register:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Login Required Button */
+.report-issue-btn.login-required {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #9ca3af; /* Gray color for login-required button */
+}
+
+.report-issue-btn.login-required:hover {
+  background-color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .guest-banner-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .banner-btn {
+    width: 100%;
+    text-align: center;
+  }
+} 

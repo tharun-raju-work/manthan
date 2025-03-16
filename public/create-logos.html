@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="canvas192" width="192" height="192"></canvas>
+<canvas id="canvas512" width="512" height="512"></canvas>
+<script>
+function drawLogo(canvas, size) {
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#61dafb';
+  ctx.beginPath();
+  ctx.arc(size/2, size/2, size/2.5, 0, 2 * Math.PI);
+  ctx.fill();
+  
+  // Save as PNG
+  const link = document.createElement('a');
+  link.download = `logo${size}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+drawLogo(document.getElementById('canvas192'), 192);
+drawLogo(document.getElementById('canvas512'), 512);
+</script>
+</body>
+</html> 
